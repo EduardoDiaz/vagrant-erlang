@@ -12,7 +12,7 @@ apt-get update -yq > /dev/null
 
 # install dependencies
 apt-get install build-essential openssl git libncurses5-dev autoconf \
-    m4 curl libssl-dev unixodbc-dev flex -y
+    linux-headers-$(uname -r) m4 curl libssl-dev unixodbc-dev flex -y
 
 # clean
 apt-get clean
