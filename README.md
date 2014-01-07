@@ -1,7 +1,6 @@
 Vagrant-erlang-kerl
 ===================
 
--------------------
 It is a script to build a linux environment (precise64) development for erlang
 in [vagrant][1] with [kerl][2] and [rebar][3] installed and create boxes.
 
