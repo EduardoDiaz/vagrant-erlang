@@ -44,7 +44,7 @@ sudo -Hu vagrant /usr/local/bin/kerl install $ERL_BUILD $ERL_BUILD_DIR
 ln -s $ERL_BUILD_DIR $ERL_TOP
 
 # install rebar
-wget https://raw.github.com/wiki/rebar/rebar/rebar && chmod u+x rebar
+wget https://raw.github.com/wiki/rebar/rebar/rebar && chmod 775 rebar
 mv rebar /usr/local/bin
 
 # activate erlang version
