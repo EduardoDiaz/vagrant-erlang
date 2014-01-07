@@ -11,7 +11,7 @@ echo -e 'LC_ALL="en_US.UTF-8"' >> /etc/default/locale
 apt-get update -yq > /dev/null
 
 # install dependencies
-apt-get install build-essential openssl git libncurses5-dev autoconf \
+apt-get install wget build-essential openssl git libncurses5-dev autoconf \
     linux-headers-$(uname -r) m4 curl libssl-dev unixodbc-dev flex -y
 
 # clean
@@ -42,6 +42,10 @@ sudo -Hu vagrant /usr/local/bin/kerl install $ERL_BUILD $ERL_BUILD_DIR
 
 # link build in current
 ln -s $ERL_BUILD_DIR $ERL_TOP
+
+# install rebar
+wget https://raw.github.com/wiki/rebar/rebar/rebar && chmod u+x rebar
+mv rebar /usr/local/bin
 
 # activate erlang version
 echo -e  ". /home/vagrant/.kerl/installs/current/activate" >> .bash_profile
